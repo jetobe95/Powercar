@@ -1,0 +1,80 @@
+.Top {
+  width: 928px;
+  height: 102px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+  background-color: var(--white-two);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding-left: 120px;
+  
+}
+
+.Path {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 80px;
+}
+
+.Description {
+  width: 688px;
+  height: 15.2px;
+  font-family: AvenirNext;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.95;
+  letter-spacing: normal;
+  color: #333333;
+}
+
+.Name {
+  width: 100%;
+  height: 13px;
+  font-weight: bold !important;
+  font-family: AvenirNext;
+  font-size: 12.8px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  margin-top: 12px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.-hrs-ago {
+  width: 44px;
+  height: 13px;
+  font-family: WorkSans;
+  font-size: 9.6px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.Button-comment {
+  font-family: AvenirNext;
+  border-radius: 4px;
+  font-weight: 600;
+  float: right;
+}
+
+.-hrs-ago {
+  width: 50px;
+  height: 13px;
+  font-family: WorkSans;
+  font-size: 9.6px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.38);
+}

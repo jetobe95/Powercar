@@ -1,0 +1,7 @@
+<%- if user_signed_in? %>
+  	<h1>PowerCar</h1>
+	<p>Welcome, <%=  current_user.email %></p>
+<% else %>
+  	<h1>PowerCar</h1>
+	<p>Welcome to our platform</p> 		
+<% end %>

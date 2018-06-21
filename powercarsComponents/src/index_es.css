@@ -1,0 +1,57 @@
+.Rectangle {
+  position:relative;
+  width: 1920px;
+  height: 1200px;
+  background-color: #fafafa;
+  border: solid 1px #979797;
+}
+
+.rectangle2 {
+  position: absolute;
+  top: 25px;
+  right: 376px;
+  width: 87px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #36b37e;
+}
+
+/* .content_es {
+  background-color: #fafafa;
+} */
+
+.footer_es {
+  position:absolute;
+  right: 376px;
+  bottom: 24px;
+  width: 125px;
+  height: 19px;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2d374a;
+}
+
+.makeapost {
+  position: absolute;
+  top: 202px;
+  left: 374px;
+  width: 133px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.group {
+  position: absolute;
+  right: 889px;
+  top: 532px;
+  width: 142px;
+  height: 137px;
+  object-fit: contain;
+  opacity: 0.42;
+}

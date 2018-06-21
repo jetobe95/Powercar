@@ -1,0 +1,67 @@
+.Name {
+
+    width: 60px;
+  
+    height: 15px;
+  
+    font-family: WorkSans;
+  
+    font-size: 11.2px;
+  
+    font-weight: 500;
+  
+    font-style: normal;
+  
+    font-stretch: normal;
+  
+    line-height: 1.29;
+  
+    letter-spacing: normal;
+  
+    color: #000000;
+  
+  }
+  .Content {
+    padding-left: 120px;
+
+    width: 645px;
+  
+    height: 28.8px;
+  
+    font-family: AvenirNext;
+  
+    font-size: 9.6px;
+  
+    font-weight: 500;
+  
+    font-style: normal;
+  
+    font-stretch: normal;
+  
+    line-height: 1.5;
+  
+    letter-spacing: normal;
+  
+    color: rgba(0, 0, 0, 0.54);
+  
+  }
+  .container {
+
+    width: 928px;
+  
+    height: 91.3px;
+  
+    object-fit: contain;
+  
+    opacity: 0.1;
+  
+    border-radius: 0.8px;
+  
+    background-color: #58ab23;
+  
+    box-shadow: 0 0 1px 0 #e5e6e9;
+    
+  
+  }
+  
+  

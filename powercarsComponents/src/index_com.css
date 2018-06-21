@@ -1,0 +1,300 @@
+.powercar-comment {
+  position:relative;
+  width: 1920px;
+  height: 1200px;
+  background-color: #fafafa;
+  border: solid 1px #979797;
+}
+
+.content_com {
+  background-color: #fafafa;
+}
+
+.footer_com {
+  position: absolute;
+  right: 376px;
+  bottom: 24px;
+  width: 125px;
+  height: 19px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2d374a;
+}
+
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 376px;
+}
+
+.login {
+  position: absolute;
+  top:28px;
+  right:496px;
+  width: 40px;
+  height: 19px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2d374a;
+}
+
+.rectangle-2 {
+  position: absolute;
+  top:25px;
+  right:376px;
+  width: 87px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #36b37e;
+}
+
+.register {
+  position: absolute;
+  top: 28px;
+  right: 392px;
+  width: 54px;
+  height: 19px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  color: var(--white-two);
+}
+
+.welcome {
+  position: absolute;
+  top:102px;
+  left:376px;
+  width: 520px;
+  height: 80px;
+  font-family: AvenirNext;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #939eaf;
+}
+
+.discuss {
+  position: absolute;
+  top: 148px;
+  left: 376px;
+  width: 520px;
+  height: 80px;
+  font-family: AvenirNext;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #939eaf;
+}
+
+.backgroundscopy {
+  position: absolute;
+  top: 227px;
+  left: 376px;
+  width: 928px;
+  height: 393px;
+  object-fit: contain;
+}
+
+.bitmap {
+  position: absolute;
+  top:91px;
+  left: 120px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.nickname {
+  position: absolute;
+  top: 91px;
+  left: 152px;
+  width: 656px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 3.2px;
+  background-color: #ffffff;
+  background-color: var(--white-two);
+  border: solid 0.8px #e3e4e8;
+}
+
+.title {
+  position: absolute;
+  top: 158px;
+  left: 152px;
+  width: 656px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 3.2px;
+  background-color: #ffffff;
+  background-color: var(--white-two);
+  border: solid 0.8px #e3e4e8;
+}
+
+.comment {
+  position: absolute;
+  top: 237px;
+  left: 152px;
+  width: 656px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 3.2px;
+  background-color: #ffffff;
+  background-color: var(--white-two);
+  border: solid 0.8px #e3e4e8;
+}
+
+.rectangle3 {
+  position: absolute;
+  bottom:30px;
+  right:115px;
+  width: 87px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #36b37e;
+}
+
+.Publish {
+  position: absolute;
+  bottom: 30px;
+  right: 133px;
+  width: 48px;
+  height: 19px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  color: var(--white-two);
+}
+
+.searchbox {
+  position: absolute;
+  top: 226px;
+  right: 376px;
+  width: 208px;
+  height: 35px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-color: var(--white-two);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.searchlook {
+  position: absolute;
+  top: 236px;
+  right: 549px;
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  background-color: #939eaf;
+}
+
+.filter {
+  position: absolute;
+  top: 282px;
+  right: 550px;
+  width: 33px;
+  height: 40px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  color: #939eaf;
+}
+
+.square {
+  position: absolute;
+  top: 316px;
+  right: 376px;
+  width: 208px;
+  height: 177px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-color: var(--white-two);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.filterby {
+  position:absolute;
+  top: 326px;
+  right: 439px;
+  width: 103px;
+  height: 160px;
+  font-family: AvenirNext;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  color: #2d374a;
+}
+
+.checkcircle1 {
+  position: absolute;
+  top: 338px;
+  right: 550px;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.checkcircle2 {
+  position: absolute;
+  top: 378px;
+  right: 550px;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  border: solid 1px #c1c7d0;
+}
+
+.checkcircle3 {
+  position: absolute;
+  top: 418px;
+  right: 550px;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  border: solid 1px #c1c7d0;
+}
+
+.checkcircle4 {
+  position: absolute;
+  top: 458px;
+  right: 550px;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  border: solid 1px #c1c7d0;
+}
