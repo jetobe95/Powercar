@@ -4,6 +4,6 @@
 
  
 ![posts](https://raw.githubusercontent.com/jetobe95/Powercar/master/imagenes/Screen1.PNG)
-![VIEW POSTS]( https://raw.githubusercontent.com/jetobe95/Powercar/master/imagenes/Screen1.PNG)
+![VIEW POSTS]( https://raw.githubusercontent.com/jetobe95/Powercar/master/imagenes/Screen2.PNG)
 
-[VIEW POSTS]
+
