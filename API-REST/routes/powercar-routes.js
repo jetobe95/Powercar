@@ -1,8 +1,10 @@
 var express = require('express');
 const router = express.Router();
-const {getPosts,getComments}=require("../controllers/power-Car-Controller")
+const {getPosts,getComments,getPost}=require("../controllers/power-Car-Controller")
 router.route("/getPosts")
     .get(getPosts)
+router.route("/getPost/:postId")
+    .get(getPost)
    // .post(addProduct)
 
 

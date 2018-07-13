@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "react": "^16.4.1",
@@ -15,11 +16,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "concurrently": "concurrently \"yarn start \" \"nodemon  ./API-REST/server.js \"",
+    "concurrently": "concurrently \"react-scripts start \" \" yarn run devApi \"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "devApi": "node ./src/API-REST/app.js"
+    "devApi": "nodemon ./API-REST/server.js"
   },
   "devDependencies": {
     "body-parser": "^1.18.3",

@@ -1,64 +1,79 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import './index.css';
 import App from './App';
 import timeago from 'timeago.js';
 
 import Posts from './post/Posts';
 import CardPost from './post/card';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { data } from '../src/data.json';
 import { Container } from 'reactstrap';
+import PORTS from './VARIABLES/PORTS';
+import TimeAgoSpanish from './timeAgo/es';
+timeago.register("spanish",TimeAgoSpanish)
 const timeagoInstance = timeago(); // set the relative date here.
 
 
 class Home extends Component {
-    state = { Posts:"",cargando:false }
-    componentWillMount(){
-        fetch('http://semper.serveo.net/posts').then(response=>response.json())
-        .then(db => 
-            this.setState(
-                {
-                    cargando:!this.state.cargando,
-                    Posts:db
+    state = { Posts: [], cargando: false,messageStatus:"Cargando..." }
+    componentDidMount() {
+        fetch(`http://localhost:${PORTS.API_PORT}/getPosts`)
+        .then(response => response.json())
+        .then(response =>{
+            if (response.status) {
+                console.log('Resulta',response.resul);
                 
-                }
-            )
+
+                this.setState({cargando: !this.state.cargando,Posts: response.resul})
+                
+            }else{
+                this.setState({messageStatus:"Error Con la API:"+"Error: "+response.error})
+
+            }
+
+
+        })
         
-        )
-        
-    }
-    
+            }
+
+               
+
+
     render() {
+        const postData=this.state.Posts ||[];
         return (
             <App  >
-            
-            <Container>
-            
-           { this.state.cargando?
-           (
 
-             <Posts>
-               { this.state.Posts.map((e,i)=>{
-                 return(
-                    <CardPost
-                    key={i}
-                    title={e.title}
-                    time={timeagoInstance.format(e.created_at, 'us')   }
-                    Description={e.content}
-                    Name={e.name}
-                    src={e.image}
-                    />) 
-               })}
-               
-            </Posts>
-           ) :(
-               <h3>Cargando...</h3>
-           )
-           }
-    
-            </Container>
-    
-        </App >
+                <Container>
+                   <h5 className="m-3">Last Comments</h5>
+
+                    { this.state.cargando &&this.state.Posts ?
+                        (
+
+                            <Posts>
+                                { postData.map(post => {
+                                    return (
+                                        <CardPost
+                                        //TODO Agregar Gif 
+                                           
+                                            key={ post.idposts }
+                                            title={ post.nickname }
+                                            time={ timeagoInstance.format(post.creacion, 'spanish') }
+                                            Description={ post.Contenido }
+                                            Name={ post.nickname }
+                                            src={ post.foto }
+                                            idposts={post.idposts}
+                                        />)
+                                }) }
+
+                            </Posts>
+                        ) : (
+                            <h3>{this.state.messageStatus}</h3>
+                        )
+                    }
+
+                </Container>
+
+            </App >
         );
     }
 }

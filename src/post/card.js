@@ -29,14 +29,14 @@ render(){
         <Col sm="1" style={{"maxWidth": "4.333333%"}}>
 
           <img 
-          className="Path" 
+          className="Path mt-3" 
            src={this.props.src} 
            alt=""
            />
         
         </Col>
         
-        <Col sm="2">
+        <Col sm="2" className="ml-2 pt-0">
               <h3 
               className="Name">
               
@@ -61,9 +61,9 @@ render(){
           </p>
 
           </Col>
-          <Col  sm="6">
+          <Col  sm="6" className="Button-Container">
          
-         <Link to={`/${this.props.Name}`}>
+         <Link to={`/viewcomment/${this.props.idposts}`}>
           <Button 
             hidden={this.state.hidden}
             className="Button-comment"

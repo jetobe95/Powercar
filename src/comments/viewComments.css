@@ -1,18 +1,18 @@
 .viewComments {
-
-    width: 928px;
-  
-    height: 320px;
-  
-    object-fit: contain;
-  
-    border-radius: 4px;
-  
-    background-color: #ffffff;
-  
-    background-color: var(--white-two);
-  
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-  
-  }
-  
+  width: 928px;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-color: var(--white-two);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+/* .container {
+  width: 928px;
+  height: 91.3px;
+  object-fit: contain;
+  opacity: 0.1;
+  border-radius: 0.8px;
+  background-color: #58ab23;
+  box-shadow: 0 0 1px 0 #e5e6e9;
+} */

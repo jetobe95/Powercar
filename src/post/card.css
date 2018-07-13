@@ -1,12 +1,12 @@
 .Top {
   width: 928px;
-  height: 102px;
+  height: 122px;
   object-fit: contain;
   border-radius: 4px;
   background-color: #fcfcfc;
   background-color: var(--white-two);
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin:0px 0px 12.3px 0px;
   padding-left: 120px;
   
 }
@@ -21,14 +21,15 @@
 .Description {
   width: 688px;
   height: 15.2px;
-  font-family: AvenirNext;
+  font-family: AvenirNext-Medium;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: 0.95;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   color: #333333;
+  margin: 0px 0px 12.3px 0px;
 }
 
 .Name {
@@ -46,17 +47,18 @@
   color: #000000;
 }
 
-.-hrs-ago {
-  width: 44px;
+h3.-hrs-ago  {
+  
+  width: 100%;
   height: 13px;
-  font-family: WorkSans;
-  font-size: 9.6px;
+  /* font-family: WorkSans; */
+  font-size: 11px;
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-stretch: expanded;
   line-height: 1.33;
   letter-spacing: normal;
-  color: rgba(0, 0, 0, 0.38);
+  color: rgba(10, 0, 0, 0.952);
 }
 
 .Button-comment {
@@ -64,6 +66,10 @@
   border-radius: 4px;
   font-weight: 600;
   float: right;
+  background-color: #36b37e;
+  font-size: 14px;
+  letter-spacing: 0px;
+  
 }
 
 .-hrs-ago {
@@ -77,4 +83,7 @@
   line-height: 1.33;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.38);
+}
+.Button-Container{
+  max-width: 40%;
 }

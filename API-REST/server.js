@@ -1,13 +1,18 @@
 const express = require('express');
 const app = express();
+const PORTS=require("../src/VARIABLES/PORTS")
 // const http = require('http').Server(app);
+const cors = require('cors')
+
+ 
 const path=require("path");
 const morgan=require('morgan');
 const routes=require('./routes/powercar-routes')
 
+app.use(cors())
 app.use(morgan('dev'));
 
-app.set('port', process.env.PORT || 3002);
+app.set('port', process.env.PORT || PORTS.API_PORT);
 
 app.use(express.static(__dirname + '/public'));
 
