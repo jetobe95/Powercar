@@ -10,6 +10,7 @@ import Header from '../images/header/container/header';
 import Logo from '../images/header/component/logo';
 import ViewComment from '../comments/viewComment';
 import Content_com from '../content/Content_com';
+import HeaderTop from '../content/Header_es';
   
 
 class RouterPage extends Component {
@@ -20,7 +21,8 @@ class RouterPage extends Component {
             <Router >
                 <div className="Rectangle-header">
                         <Header>
-                            <Logo />
+                            {/* <Logo /> */}
+                            <HeaderTop/>
 
                         </Header>
                     

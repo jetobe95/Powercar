@@ -9,65 +9,58 @@ import { data } from '../src/data.json';
 import { Container } from 'reactstrap';
 import PORTS from './VARIABLES/PORTS';
 import TimeAgoSpanish from './timeAgo/es';
-timeago.register("spanish",TimeAgoSpanish)
+timeago.register("spanish", TimeAgoSpanish)
 const timeagoInstance = timeago(); // set the relative date here.
 
 
 class Home extends Component {
-    state = { Posts: [], cargando: false,messageStatus:"Cargando..." }
+    state = { Posts: [], cargando: false, messageStatus: "Cargando..." }
     componentDidMount() {
         fetch(`http://localhost:${PORTS.API_PORT}/getPosts`)
-        .then(response => response.json())
-        .then(response =>{
-            if (response.status) {
-                console.log('Resulta',response.resul);
-                
+            .then(response => response.json())
+            .then(response => {
+                if (response.status) {
+                    console.log('Resulta', response.resul);
+                    this.setState({ cargando: !this.state.cargando, Posts: response.resul })
 
-                this.setState({cargando: !this.state.cargando,Posts: response.resul})
-                
-            }else{
-                this.setState({messageStatus:"Error Con la API:"+"Error: "+response.error})
+                } else {
+                    this.setState({ messageStatus: "Error Con la API:" + "Error: " + response.error })
 
-            }
+                }
+            })
 
-
-        })
-        
-            }
-
-               
-
-
+    }
+    
     render() {
-        const postData=this.state.Posts ||[];
+        const postData = this.state.Posts || [];
         return (
             <App  >
 
                 <Container>
-                   <h5 className="m-3">Last Comments</h5>
+                    <h5 className="m-3">Last Comments</h5>
 
-                    { this.state.cargando &&this.state.Posts ?
+                    { this.state.cargando && this.state.Posts ?
                         (
 
                             <Posts>
                                 { postData.map(post => {
                                     return (
                                         <CardPost
-                                        //TODO Agregar Gif 
-                                           
+                                            //TODO Agregar Gif 
+
                                             key={ post.idposts }
                                             title={ post.nickname }
                                             time={ timeagoInstance.format(post.creacion, 'spanish') }
                                             Description={ post.Contenido }
                                             Name={ post.nickname }
                                             src={ post.foto }
-                                            idposts={post.idposts}
+                                            idposts={ post.idposts }
                                         />)
                                 }) }
 
                             </Posts>
                         ) : (
-                            <h3>{this.state.messageStatus}</h3>
+                            <h3>{ this.state.messageStatus }</h3>
                         )
                     }
 
@@ -79,3 +72,9 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+
+
+
+

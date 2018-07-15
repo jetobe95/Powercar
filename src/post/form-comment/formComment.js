@@ -5,14 +5,19 @@ class FormComment extends Component {
     state = {  }
     render() {
         return (
-            <Form onSubmit={this.props.submitButton}>
+            <Form onSubmit={this.props.submitButton} className="Form-Comment">
                     <Row>
 
                         <Col sm={10}>
+
                             <Input
+                            required
                              onChange={this.props.onChangeInput}
                              className="Form-textArea" 
-                             type="textarea" name="text" id="exampleText" placeholder="Write a comment.."/>
+                             type="text" name="text" 
+                             
+                             id="exampleText" 
+                             placeholder="Write a comment.."/>
                         </Col>
                         <Col sm={2}>
                         <Button type="submit" >

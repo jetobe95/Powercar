@@ -18,6 +18,7 @@ class CardPost extends Component{
     this.setState({
       collapse:!this.state.collapse,
   })
+  
 
 }
 render(){

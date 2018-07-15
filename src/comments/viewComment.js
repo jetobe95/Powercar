@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import CardPost from '../post/card';
 import Comments from './comments';
+import logoAnonimo from '../img/anonimo.png';
+
+import { animateScroll as scroll } from 'react-scroll'
 import { Comments as allComments } from "../../src/data.json";
 import Comment from './comment';
 import FormComment from '../post/form-comment/formComment';
@@ -10,12 +13,24 @@ import Posts from '../post/Posts';
 import timeago from 'timeago.js';
 import TimeAgoSpanish from "../timeAgo/es";
 import './comment.css'
+
+import SendComment from './sendComment';
+import GetDateFormat from '../timeAgo/get-time';
 timeago.register("spanish", TimeAgoSpanish)
 const timeagoInstance = timeago(); // set the relative date here.
 
 let date = new Date()
 class ViewComment extends Component {
-    state = { allComments, inputComment: "", Post: [], cargando: false, messageStatus: "Cargando..." }
+    state = {
+        allComments, inputComment: "",
+        Post: [], cargando: false,
+        messageStatus: "Cargando...",
+        name: "Anonimo",
+
+    }
+    componentDidMount() {
+        scroll.scrollToTop();
+    }
 
     componentWillMount() {
 
@@ -23,7 +38,7 @@ class ViewComment extends Component {
             .then(response => response.json())
             .then(response => {
                 if (response.status) {
-                    console.log('Resulta', response.resul);
+
                     this.setState({ allComments: response.resul, cargando: true })
                 } else {
                     this.setState({ messageStatus: "Error Con la API:" + "Error: " + response.error })
@@ -35,7 +50,7 @@ class ViewComment extends Component {
             .then(response => response.json())
             .then(response => {
                 if (response.status) {
-                    console.log('Resulta', response.resul);
+
                     this.setState({ Post: response.resul, cargando: true })
                 } else {
                     this.setState({ messageStatus: "Error Con la API:" + "Error: " + response.error })
@@ -49,19 +64,31 @@ class ViewComment extends Component {
             })
     };
 
+
     submitButton = (e) => {
         const Comments = this.state.allComments;
+        const body = {
+            idpost: parseInt(this.props.match.params.postId) ,
+            iduser: 0,
+            contenido: this.state.inputComment,
+            src: "",
+            creacion: GetDateFormat(date),
+        }
+        SendComment(body);
         Comments.push({
-            Name: this.state.inputComment,
-            Contenido: this.state.inputComment,
-            time: date.toDateString
+            Name: this.state.name,
+            contenido: this.state.inputComment,
+            time: date.toDateString,
+            foto:logoAnonimo
         })
 
         e.preventDefault();
+        scroll.scrollToBottom({ delay: 0, duration: 300 });
 
         this.setState({
             allComments: Comments
         })
+
     }
     onChangeInput = (e) => {
         this.setState({
@@ -73,7 +100,7 @@ class ViewComment extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 { this.state.cargando ?
                     (
 
@@ -96,9 +123,9 @@ class ViewComment extends Component {
                             <Comments>
                                 { this.state.allComments.map((comment, key) => (
                                     <div className="Comment m-4"
-                                        key={ comment.idcomments }>
+                                        key={ key }>
                                         <Comment
-                                            key={ comment.idcomments }
+                                            key={ key }
                                             Name={ comment.nickname }
                                             hidden={ true }
                                             time={ comment.time }
