@@ -1,0 +1,54 @@
+{
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "git.autoRepositoryDetection": true,
+    "git.confirmSync": false,
+    // "terminal.external.windowsExec": "C:\\Program Files\\Git\\git-bash.exe"
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "php.validate.executablePath": null,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.startupEditor": "newUntitledFile",
+    "git.enableSmartCommit": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "workbench.colorTheme": "Panda Syntax",
+    // "editor.snippetSuggestions": "top",
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "[javascriptreact]": {},
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.cursorStyle": "line",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 15,
+    "workbench.statusBar.visible": true,
+    "workbench.editor.showTabs": true,
+    "editor.stablePeek": true,
+    "editor.formatOnSave": false,
+    "todohighlight.exclude": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map",
+        "**/.next/**"
+    ],
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true
+}

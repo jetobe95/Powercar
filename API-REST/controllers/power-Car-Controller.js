@@ -98,17 +98,21 @@ module.exports = {
         }
 
     },
-    deleteProduct: (req, res) => {
-        const { id } = req.params;
-        products.forEach((product, i) => {
+    addPost: (req, res) => {
+        console.log("REQ.BODY", req.body);
+        const { iduser, contenido, src, creacion } = req.body
+        if (iduser && contenido && src && creacion) {
+            const insertInto = `INSERT INTO powerCar.posts (idUser, Contenido, src, creacion) 
+           VALUES (${mysql.escape(iduser)}, ${mysql.escape(contenido)}, ${mysql.escape(src)}, ${mysql.escape(creacion)});`
+            res.status(200).json({ status: true, message: "Recibido" })
+        }
+        else {
 
-            products.splice(i, 1);
-
-        });
-        res.json({ "eliminado": true })
+            res.status(404).json({ status: false, message: "Error al obtener el Body" })
+        }
+        // console.log("Query", insertInto);
 
     }
-
 
 
 

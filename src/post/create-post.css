@@ -1,0 +1,87 @@
+.Contenedor {
+    margin: 0px 0px 20px 150px;
+}
+
+form.create-post-form {
+    margin: 0px 120px 0px 120px;
+}
+
+h4.Discuss-your-idea {
+    width: 161px;
+    height: 40px;
+    font-family: AvenirNext;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #939eaf;
+}
+
+label.create-post-label {
+    width: 65px;
+    height: 40px;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.86;
+    letter-spacing: normal;
+    color: #2d374a;
+}
+
+.form-control.create-post::placeholder {
+    width: 78px;
+    height: 15px;
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #aaaaaa;
+}
+
+.Make-post {
+    width: 133px;
+    height: 37px;
+    border-radius: 4px;
+    background-color: #36b37e;
+    /* margin-top: 5px; */
+    font-family: AvenirNext;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff !important;
+    color: var(--white-two);
+}
+
+.Make-post.right {
+    /* margin: 20px 0px 30px 400px; */
+    position: inherit;
+}
+
+.Welcome-to-our-platf {
+    /* width: 520px;
+    height: 80px; */
+    font-family: AvenirNext;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #939eaf;
+}
+
+.Welcome-to-our-platf .text-style-1 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.33;
+}

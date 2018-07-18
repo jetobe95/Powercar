@@ -1,4 +1,6 @@
-const PORTS={
-    API_PORT:"3002",
+//TODO: Varibles editable
+
+const PORTS = {
+    API_PORT: "3004",
 }
-module.exports= PORTS;
+module.exports = PORTS;

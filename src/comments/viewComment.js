@@ -41,7 +41,7 @@ class ViewComment extends Component {
 
                     this.setState({ allComments: response.resul, cargando: true })
                 } else {
-                    this.setState({ messageStatus: "Error Con la API:" + "Error: " + response.error })
+                    this.setState({ messageStatus: `error Con la api ${response.error}` })
 
 
                 }
@@ -53,7 +53,7 @@ class ViewComment extends Component {
 
                     this.setState({ Post: response.resul, cargando: true })
                 } else {
-                    this.setState({ messageStatus: "Error Con la API:" + "Error: " + response.error })
+                    this.setState({ messageStatus: `error Con la api ${response.error}` })
 
 
                 }
@@ -68,7 +68,7 @@ class ViewComment extends Component {
     submitButton = (e) => {
         const Comments = this.state.allComments;
         const body = {
-            idpost: parseInt(this.props.match.params.postId) ,
+            idpost: parseInt(this.props.match.params.postId, 0),
             iduser: 0,
             contenido: this.state.inputComment,
             src: "",
@@ -79,7 +79,7 @@ class ViewComment extends Component {
             Name: this.state.name,
             contenido: this.state.inputComment,
             time: date.toDateString,
-            foto:logoAnonimo
+            foto: logoAnonimo
         })
 
         e.preventDefault();

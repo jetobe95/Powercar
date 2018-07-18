@@ -1,15 +1,21 @@
-const SendComment =function (body) {
-    
-    return new Promise((resolve,reject)=>{
+import PORT from '../VARIABLES/PORTS';
+const SendComment = function (body) {
 
-        fetch('http://localhost:3002/addComment', {
-            method: 'post',
-            headers: {'Content-Type':'application/json'},
-            body:JSON.stringify(body)
-           })
-           .then(response=>response.json())
-           .then(response=>resolve(response))
-           .catch(error=>reject(error))
+    return new Promise((resolve, reject) => {
+        try {
+
+            fetch(`http://localhost:${PORT.API_PORT}/addComment`, {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            })
+                .then(response => response.json())
+                .then(response => resolve(response))
+        } catch (e) {
+            reject(e)
+        }
+
+
 
     })
 

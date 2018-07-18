@@ -24,19 +24,19 @@ class Home extends Component {
                     this.setState({ cargando: !this.state.cargando, Posts: response.resul })
 
                 } else {
-                    this.setState({ messageStatus: "Error Con la API:" + "Error: " + response.error })
+                    this.setState({ messageStatus: `error Con la api ${response.error}` })
 
                 }
             })
 
     }
-    
+
     render() {
         const postData = this.state.Posts || [];
         return (
             <App  >
 
-                <Container>
+                <div className="container">
                     <h5 className="m-3">Last Comments</h5>
 
                     { this.state.cargando && this.state.Posts ?
@@ -64,7 +64,7 @@ class Home extends Component {
                         )
                     }
 
-                </Container>
+                </div>
 
             </App >
         );
