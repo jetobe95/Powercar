@@ -2,7 +2,7 @@ import PORT from '../VARIABLES/PORTS'
 function AddPost(post) {
     return new Promise((resolve, reject) => {
         try {
-            fetch(`http://localhost:${PORT.API_PORT}/addPost`, {
+            fetch(`/addPost`, {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(post)

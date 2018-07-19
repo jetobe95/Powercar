@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-// import SendComment from '../comments/sendComment';
 import GetDateFormat from '../timeAgo/get-time';
 import './create-post.css';
 import AddPost from '../services/add-post';
+// import {Redirect } from 'react-router-dom';
+
+
 
 export default class FormCreatePost extends Component {
     handleSubmitPost = (event) => {
         event.preventDefault();
         const $form = new FormData(this.ref);
-        const iduser = 1;//FIXME: usar cuando el login sea aplicado
+        const iduser = 1;//FIXME: hay que cambiarlo cuando el login sea aplicado
         const contenido = $form.get("comment");
-        const src = "";
+        const src = "http://www.forestcar.com.ar/static/nuevo_cruze_testdrive_.jpg"; //TODO:AGREGAR INPUT TIPO FILE
         const creacion = GetDateFormat();
         const post = { iduser, contenido, src, creacion }
 
         AddPost(post)
-            .then(response => console.log("Response", response))
+            .then(response => {
+                console.log("Response", response)
+                event.reset()
+        })
       
     }
 

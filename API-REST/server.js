@@ -17,14 +17,16 @@ app.use(morgan('dev'));
 
 app.set('port', process.env.PORT || PORTS.API_PORT);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build'));
+// app.use(express.static("../build"));
 
-
-app.get("/", (req, res) => {
-
-  res.sendFile(path.join(__dirname, "public", "index"))
-})
 app.use("/", routes);
+
+app.get("*", (req, res) => {
+  
+ 
+  res.sendFile(path.join(__dirname, "build", "index"))
+})
 
 app.listen(app.get('port'), function () {
 

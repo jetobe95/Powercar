@@ -2,6 +2,7 @@ var dbConnection = require('../db/config');
 const connection = dbConnection();
 const mysql = require('mysql');
 module.exports = {
+    //Obtener Un post con una ID
     getPost: (req, res) => {
         const { postId } = req.params;
         const getProvidersQuery = `
@@ -17,12 +18,13 @@ module.exports = {
                 )
             }
         })
-
+        
     },
+    //Obtener Todos los posts
     getPosts: (req, res) => {
         const getProvidersQuery = `SELECT u.nickname,p.idposts,p.Contenido,p.creacion,u.foto 
         FROM Users u,posts p 
-        where u.idUsers=p.idUser order by p.creacion ASC`
+        where u.idUsers=p.idUser order by p.creacion DESC`
         connection.query(getProvidersQuery, (error, resul) => {
             if (error) {
                 res.json({ status: false, error })
@@ -33,6 +35,7 @@ module.exports = {
         })
 
     },
+    //Obtener los comentarios de un post
     getComments: (request, response) => {
         const { postId } = request.params;
         const getWorkersQuery = `
@@ -59,12 +62,13 @@ module.exports = {
 
 
     },
+    //Agregar comentario a un post con ID
 
     addComment: (req, res) => {
         const { idpost, iduser, contenido, src, creacion } = req.body
         console.log(req.body);
 
-        if (true) {
+        if (true) { //FIXME:Cambiarlo
 
             const insertInto = `INSERT INTO 
             comments (iduser, contenido, src, creacion, idpost) 
@@ -98,19 +102,32 @@ module.exports = {
         }
 
     },
+    //Agregar un post
     addPost: (req, res) => {
         console.log("REQ.BODY", req.body);
-        const { iduser, contenido, src, creacion } = req.body
+        const { iduser, contenido, src, creacion } = req.body;
         if (iduser && contenido && src && creacion) {
             const insertInto = `INSERT INTO powerCar.posts (idUser, Contenido, src, creacion) 
            VALUES (${mysql.escape(iduser)}, ${mysql.escape(contenido)}, ${mysql.escape(src)}, ${mysql.escape(creacion)});`
-            res.status(200).json({ status: true, message: "Recibido" })
+      
+           
+           connection.query(insertInto,(error,resul)=>{
+               if(error) {
+                   
+                   res.status(505).json({ status: false, message: "Error al obtener el Body" })
+                } else{
+                    res.status(200).json({ status: true, message: "Recibido",dbresponse:resul })
+
+               }
+
+
+           })
         }
         else {
 
             res.status(404).json({ status: false, message: "Error al obtener el Body" })
         }
-        // console.log("Query", insertInto);
+       
 
     }
 

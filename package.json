@@ -12,11 +12,12 @@
     "react-router-dom": "4.4.0-alpha.0",
     "react-scripts": "1.1.4",
     "react-scroll": "1.7.10",
+    "react-toastify": "^4.1.0",
     "reactstrap": "6.1.0",
     "timeago.js": "3.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node ./API-REST/SERVER.JS",
     "concurrently": "concurrently \"react-scripts start \" \" yarn run devApi \"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

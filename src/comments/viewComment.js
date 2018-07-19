@@ -34,7 +34,7 @@ class ViewComment extends Component {
 
     componentWillMount() {
 
-        fetch(`http://localhost:${PORTS.API_PORT}/getComments/${this.props.match.params.postId}`)
+        fetch(`/getComments/${this.props.match.params.postId}`)
             .then(response => response.json())
             .then(response => {
                 if (response.status) {
@@ -46,7 +46,7 @@ class ViewComment extends Component {
 
                 }
             })
-        fetch(`http://localhost:${PORTS.API_PORT}/getPost/${this.props.match.params.postId}`)
+        fetch(`/getPost/${this.props.match.params.postId}`)
             .then(response => response.json())
             .then(response => {
                 if (response.status) {

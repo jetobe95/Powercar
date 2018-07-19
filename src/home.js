@@ -16,7 +16,7 @@ const timeagoInstance = timeago(); // set the relative date here.
 class Home extends Component {
     state = { Posts: [], cargando: false, messageStatus: "Cargando..." }
     componentDidMount() {
-        fetch(`http://localhost:${PORTS.API_PORT}/getPosts`)
+        fetch(`/getPosts`)
             .then(response => response.json())
             .then(response => {
                 if (response.status) {

@@ -1,6 +1,6 @@
 //TODO: Varibles editable
 
 const PORTS = {
-    API_PORT: "3004",
+    API_PORT: "2999",
 }
 module.exports = PORTS;
