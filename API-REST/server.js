@@ -1,19 +1,19 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 const PORTS = require("../src/VARIABLES/PORTS")
 // const http = require('http').Server(app);
 const cors = require('cors')
 
 
 const path = require("path");
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const routes = require('./routes/powercar-routes')
 
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded());
 app.use(cors())
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 app.set('port', process.env.PORT || PORTS.API_PORT);
 
