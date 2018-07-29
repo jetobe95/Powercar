@@ -3,13 +3,15 @@ import log from '../logo.svg'
 import './card.css'
 import { Row, Col, Button, } from 'reactstrap';
 import {
-  Link
+  Link,Redirect
 } from 'react-router-dom'
 
 class CardPost extends Component {
   state = {
     collapse: false,
     hidden: (this.props.hidden),
+    redirect:false,
+    confirmRedirect:false
   }
 
 
@@ -22,68 +24,74 @@ class CardPost extends Component {
 
   }
   render() {
+    
+    
+    if(this.state.redirect&&this.props.confirmRedirect) return(<Redirect to={`/viewcomment/${this.props.idposts||"/"}`} />)
     return (
+
       <div
-        className="Top "
+        className="row centrar"
+        onClick={()=>this.setState({redirect:true})}
       >
-        <Row>
-          <Col sm="1" style={ { "maxWidth": "4.333333%" } }>
 
-            <img
-              className="Path mt-3"
-              src={ this.props.src }
-              alt=""
-            />
+        <div
+          className=" Top  "
+        >
+          <div className="container-fluid">
+            <div className="row">
 
-          </Col>
 
-          <Col sm="2" className="ml-2 pt-0">
-            <h3
-              className="Name">
+              <div className="col-sm-3">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-sm-auto nickname-hora">
+                      <img
+                        className="Path "
+                        src={ this.props.src }
+                        alt=""
+                      />
 
-              { this.props.title }
 
-            </h3>
-            <h3
-              className="-hrs-ago">
+                       <div className="nickname-hora-content" >
+                      <h3
+                        className="Name">
 
-              { this.props.time }
+                        { this.props.title }
 
-            </h3>
+                      </h3>
+                      <h3
+                        className="-hrs-ago">
 
-          </Col>
+                        { this.props.time }
 
-        </Row>
-        <Row>
-          <Col sm="6">
-            <p
-              className="Description">
-              { this.props.Description }
-            </p>
+                      </h3>
 
-          </Col>
-          <Col sm="6" className="Button-Container">
+                    </div>
+                    </div>
+                  </div>
+                </div>
 
-            <Link to={ `/viewcomment/${this.props.idposts}` }>
-              <Button
-                hidden={ this.state.hidden }
-                className="Button-comment"
-                onClick={ this.ButtonClick }
-                color="success">
-                Comentar
-          </Button>{ ' ' }
-            </Link>
+              </div>
 
 
 
-          </Col>
-          {/* <CollapseComment
-          collapse={this.state.collapse}
-          /> */}
-        </Row>
+            </div>
+            <div className="row">
+              <div className="col-sm-12 m-4">
+
+                <p
+                  className="Description">
+                  { this.props.Description }
+                </p>
+              </div>
+            
+
+            </div>
+          </div>
 
 
 
+        </div>
       </div>
 
     );

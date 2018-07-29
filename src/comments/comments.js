@@ -4,9 +4,13 @@ import './comments.css'
      state = {  }
      render() {
          return (
-             <div  >
-                <hr/>
+             //TODO:container fluid 
+             <div className="container" > 
+             <div className="row">
+
                 {this.props.children} 
+             </div>
+                {/* <hr/> */}
             </div>
 
          );

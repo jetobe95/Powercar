@@ -3,51 +3,33 @@ import { Row, Col, } from 'reactstrap';
 import log from '../logo.svg'
 import './comment.css'
 import timeAgoCal from '../timeAgo/time-ago-calc'
+import PhotoNameTime from './../post/components/foto-name-time';
 
 const postComment = () => {
 
 }
 const Comment = (props) => (
   <div  >
-    <div >
-
-      <Row>
-        {/* <Col sm="1"  className="ml-0 p-0" > */}
-
-          <img
-            className="Photo"
-            src={ props.foto }
-            alt=""
-          />
-
-        {/* </Col> */}
-
-        <Col sm="2" className="ml-0 p-0 Comment-Info">
-          <h3 className="Name">
-            { props.Name }
-
-          </h3>
-          <h3 className="-hrs-ago ">
-            { timeAgoCal(props.creacion )}
-
-          </h3>
 
 
-          
+    <div className="row">
+      <div className="container">
+        <div className="row">
+          <PhotoNameTime {...props}/>
+        </div>
+      </div>
 
-        </Col>
-
-      </Row>
     </div>
+
     <Row className="Description-Comment">
-      <Col sm="6"  >
+      <div className="col-sm-12 m-2"   >
         <p
-        className="Description-Comment"
+          className="Description-Comment"
         >
           { props.Description }
         </p>
 
-      </Col>
+      </div>
 
 
     </Row>

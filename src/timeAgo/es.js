@@ -1,18 +1,18 @@
 export default  function(number, index, total_sec) {
     return [
       ['justo ahora', 'en un rato'],
-      ['Hace %s seg', 'en %s seg'],
-      ['Hace 1 minuto', 'en 1 minuto'],
-      ['Hace %s minutos', 'en %s minutos'],
-      ['Hace 1 hora', 'en 1 hora'],
-      ['Hace %s h', 'en %s h'],
-      ['Hace 1 día', 'en 1 día'],
-      ['Hace %s días', 'en %s días'],
-      ['Hace 1 semana', 'en 1 semana'],
-      ['Hace %s semanas', 'en %s semanas'],
-      ['Hace 1 mes', 'en 1 mes'],
-      ['Hace %s meses', 'en %s meses'],
-      ['Hace 1 año', 'en 1 año'],
-      ['Hace %s años', 'en %s años']
+      [' %s seg', 'en %s seg'],
+      [' 1 min', 'en 1 min'],
+      [' %s min', 'en %s min'],
+      [' 1 h', 'en 1 h'],
+      [' %s h', 'en %s h'],
+      [' 1 d', 'en 1 d'],
+      [' %s d', 'en %s d'],
+      [' 1 sem', 'en 1 sem'],
+      [' %s sem', 'en %s sem'],
+      [' 1 mes', 'en 1 mes'],
+      [' %s meses', 'en %s meses'],
+      [' 1 año', 'en 1 año'],
+      [' %s años', 'en %s años']
     ][index];
   };

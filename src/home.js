@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import './index.css';
-import App from './App';
 import timeago from 'timeago.js';
-
-import Posts from './post/Posts';
+import App from './App';
+import './index.css';
 import CardPost from './post/card';
-import { data } from '../src/data.json';
-import { Container } from 'reactstrap';
-import PORTS from './VARIABLES/PORTS';
+import Posts from './post/Posts';
 import TimeAgoSpanish from './timeAgo/es';
+import PORTS from './VARIABLES/PORTS';
+import LoadingLogo from "./images/loader.gif";
 timeago.register("spanish", TimeAgoSpanish)
 const timeagoInstance = timeago(); // set the relative date here.
 
@@ -16,7 +14,7 @@ const timeagoInstance = timeago(); // set the relative date here.
 class Home extends Component {
     state = { Posts: [], cargando: false, messageStatus: "Cargando..." }
     componentDidMount() {
-        fetch(`/getPosts`)
+        fetch(`${PORTS.SERVER_IP_DEV}/getPosts`)
             .then(response => response.json())
             .then(response => {
                 if (response.status) {
@@ -24,7 +22,7 @@ class Home extends Component {
                     this.setState({ cargando: !this.state.cargando, Posts: response.resul })
 
                 } else {
-                    this.setState({ messageStatus: `error Con la api ${response.error}` })
+                    this.setState({ messageStatus: `Error en la api \n ${response.error.errno || ""}` })
 
                 }
             })
@@ -37,7 +35,9 @@ class Home extends Component {
             <App  >
 
                 <div className="container">
-                    <h5 className="m-3">Last Comments</h5>
+                    <h5 className="">Last Comments</h5>
+                    {/* <div className="row"> */}
+
 
                     { this.state.cargando && this.state.Posts ?
                         (
@@ -47,7 +47,7 @@ class Home extends Component {
                                     return (
                                         <CardPost
                                             //TODO Agregar Gif 
-
+                                            confirmRedirect
                                             key={ post.idposts }
                                             title={ post.nickname }
                                             time={ timeagoInstance.format(post.creacion, 'spanish') }
@@ -60,11 +60,16 @@ class Home extends Component {
 
                             </Posts>
                         ) : (
-                            <h3>{ this.state.messageStatus }</h3>
+                            <img src={LoadingLogo} alt=""
+                            width={40}
+                            height={40}
+                        />
                         )
                     }
+                    </div>
 
-                </div>
+
+                {/* </div> */}
 
             </App >
         );

@@ -4,10 +4,10 @@
   height: 1200px; */
   background-color: #fafafa;
   /* border: solid 1px #979797; */
-  background-image: url(../src/images/contenido/group.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-left: 120px;
+  /* background-image: url(../src/images/contenido/group.svg); */
+  /* background-repeat: no-repeat; */
+  /* background-position: fixed; */
+  /* padding-left: 120px; */
 }
 
 .Log-in {
@@ -27,5 +27,5 @@
   background-color: #fafafa;
   /* background-repeat: no-repeat; */
   /* background-position: center; */
-  padding-left: 120px;
+  /* padding-left: 120px; */
 }

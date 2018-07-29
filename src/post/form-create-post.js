@@ -29,15 +29,13 @@ export default class FormCreatePost extends Component {
     render() {
         return (
             <div className="container">
-                <form className="create-post-form"
-                    ref={ ref => this.ref = ref }
-                    onSubmit={ this.handleSubmitPost }>
-                    <div className="row">
-                        <div className="col-12">
+                    <div className="row justify-content-center m-4">
+                        <form 
+                             ref={ ref => this.ref = ref }
+                                onSubmit={ this.handleSubmitPost }>
                             <h4 className="Discuss-your-idea">Create post</h4>
-
-                        </div>
-                        <div className="col-12">
+                       
+                        <div className="form-group">
                             <label className="create-post-label" htmlFor="nick">Nickname</label>
                             <input className="form-control create-post"
                                 required
@@ -45,25 +43,25 @@ export default class FormCreatePost extends Component {
                                 name="nick"
                             />
                         </div>
-                        <div className="col-12">
+                        <div className="form-group">
                             <label className="create-post-label" htmlFor="title">Title</label>
                             <input required className="form-control create-post"
                                 id="title"
                                 name="title"
                                 type="text" placeholder="write your title.." />
                         </div>
-                        <div className="col-12">
+                        <div className="form-group">
                             <label className="create-post-label" htmlFor="nick">Comment</label>
                             <textarea required className="form-control create-post"
                                 name="comment"
                                 id="nick" placeholder="write a comment.." />
                         </div>
-                        <div className="col-4 offset-9 mt-4 mb-5">
-                            <button type="submit" className="btn btn-success Make-post right">publish</button>
+                        <div className="form-row justify-content-center">
+                            <button type="submit" className="btn btn-success btn-block Make-post right">publish</button>
                         </div>
-                    </div>
 
                 </form>
+                    </div>
             </div>
         )
     }

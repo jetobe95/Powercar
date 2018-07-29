@@ -5,7 +5,7 @@ class CreatePost extends Component {
     state = {}
     render() {
         return (
-            <div className="Contenedor">
+            <div className="container">
                 <h1 className="Welcome-to-our-platf ">
                     Welcome to our platform
                  </h1>

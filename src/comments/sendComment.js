@@ -4,7 +4,7 @@ const SendComment = function (body) {
     return new Promise((resolve, reject) => {
         try {
 
-            fetch(`/addComment`, {
+            fetch(`${PORT.SERVER_IP_DEV}/addComment`, {
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body)

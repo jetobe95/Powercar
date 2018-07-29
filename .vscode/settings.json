@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 1,
+    "window.zoomLevel": -1,
     "git.autofetch": true,
     "git.autoRepositoryDetection": true,
     "git.confirmSync": false,
@@ -12,7 +12,7 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "workbench.colorTheme": "Panda Syntax",
+    "workbench.colorTheme": "Monokai",
     // "editor.snippetSuggestions": "top",
     "files.associations": {
         "*.js": "javascriptreact"
