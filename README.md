@@ -1,10 +1,13 @@
 **How to Use**
+	**Get Started  !**
+	 1. Fork/clone this project and execute `npm install` or `yarn install`
+	2. run `npm run concurrently` this command is going to start API express built-in
+**Short Explain**
+This project is make with reactjs, i separate every component,
 
- 1. Enter to EC2 via `ssh` using the **AmazonLinux_EC2.pem** file to the following public DNS (IPv4): ec2-18-222-153-237.us-east-2.compute.amazonaws.com.
-
- **ScreenShots**
+ - Entry component `./src/Routes/routes.js`
  
-![posts](https://raw.githubusercontent.com/jetobe95/Powercar/master/imagenes/Screen1.PNG)
-![VIEW POSTS]( https://raw.githubusercontent.com/jetobe95/Powercar/master/imagenes/Screen2.PNG)
-
+  **Demo**
+  
+![VIEW POSTS]( https://raw.githubusercontent.com/jetobe95/Powercar/master/imagenes/demo.gif)
 
