@@ -1,3 +1,11 @@
+
+  @font-face{
+    src: url("AvenirNext-Medium.ttf");
+    font-family: AvenirNext-Medium;
+    /* font- */
+    
+
+}
 .row.centrar{
   display: flex;
   flex-direction: row;
@@ -49,6 +57,7 @@
   align-items: center;
   font-weight: bold !important;
   font-family: AvenirNext;
+  /* font-family: AvenirNext-Medium; */
   font-size: 16.8px;
   font-weight: 500;
   font-style: normal;

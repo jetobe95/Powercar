@@ -1,0 +1,73 @@
+@font-face {
+    src: url(HelveticaNeue-Thin.otf);
+    font-family: HelveticaNeue;
+    /* font- */
+}
+
+@font-face {
+    src: url(HelveticaNeueLight.ttf);
+    font-family: HelveticaNeuelight;
+    /* font- */
+}
+
+h5.Title {
+    width: 237px;
+    height: 29px;
+    font-size: 23.3px;
+    font-family: HelveticaNeue;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #949494;
+    /* color: red ; */
+}
+
+.Rectangle-2 {
+    width: 354.1px;
+    height: 60.2px;
+    opacity: 0.76;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-family: HelveticaNeuelight;
+    background-color: #ffffff;
+    /* background-color: var(--white-two); */
+    border: solid 1px #979797;
+}
+
+label,
+input {
+    position: relative;
+    display: block;
+    /* padding-right: 50px; */
+    /* width: 170px; */
+    box-sizing: border-box;
+}
+
+label::after {
+    content: attr(data-domain);
+    position: absolute;
+    top: 4px;
+    /* padding-bottom: 2px; */
+    left: 40px;
+    font-family: HelveticaNeueLight;
+    font-size: 14.7px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #678aff;
+    /* font-size: 12px; */
+    display: block;
+    /* color: rgba(0, 0, 0, 0.6); */
+    /* font-weight: bold; */
+}
+
+.Rectangle-2-Copy-3 {
+    width: 350.1px;
+    height: 66.3px;
+    border-radius: 2px;
+    background-color: #36b37e;
+}

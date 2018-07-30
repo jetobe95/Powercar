@@ -10,6 +10,7 @@ import '../index.css';
 import CreatePost from '../post/create-post';
 import FormCreatePost from '../post/form-create-post';
 import Page404 from '../Page404'
+import Login from './../login/components/login';
 
 
 
@@ -21,7 +22,9 @@ class RouterPage extends Component {
             <Router >
                 <div className="Rectangle-header">
                     <Header>
-                        <HeaderTop />
+                        <HeaderTop
+                      
+                         />
                         <CreatePost />
                     </Header>
                     <Switch>
@@ -29,7 +32,8 @@ class RouterPage extends Component {
                         <Route exact path="/create-post" component={ FormCreatePost } />
                         <Route exact path="/viewcomment/:postId" component={ ViewComment } />
                         <Route exact path="/comment" component={ Content_com } />
-                        <Route component={ Page404 } /> */
+                        <Route exact path="/register" component={ Login } />
+                        <Route component={ Page404 } /> 
                     </Switch>
 
                 </div>
