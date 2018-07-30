@@ -18,10 +18,10 @@ module.exports = {
                 )
             }
         })
-        
+
     },
     //Obtener Todos los posts
-    getPosts: (req, res) => {
+    getPosts: (req, res, next) => {
         const getProvidersQuery = `SELECT u.nickname,p.idposts,p.Contenido,p.creacion,u.foto 
         FROM Users u,posts p 
         where u.idUsers=p.idUser order by p.creacion DESC`
@@ -66,7 +66,7 @@ module.exports = {
 
     addComment: (req, res) => {
         const { idpost, iduser, contenido, src, creacion } = req.body
-        console.log(req.body);
+
 
         if (true) { //FIXME:Cambiarlo
 
@@ -109,25 +109,20 @@ module.exports = {
         if (iduser && contenido && src && creacion) {
             const insertInto = `INSERT INTO powerCar.posts (idUser, Contenido, src, creacion) 
            VALUES (${mysql.escape(iduser)}, ${mysql.escape(contenido)}, ${mysql.escape(src)}, ${mysql.escape(creacion)});`
-      
-           
-           connection.query(insertInto,(error,resul)=>{
-               if(error) {
-                   
-                   res.status(505).json({ status: false, message: "Error al obtener el Body" })
-                } else{
-                    res.status(200).json({ status: true, message: "Recibido",dbresponse:resul })
-
-               }
 
 
-           })
+            connection.query(insertInto, (error, resul) => {
+                if (error) {
+                    res.status(505).json({ status: false, message: "Error al obtener el Body" })
+                } else {
+                    res.status(200).json({ status: true, message: "Recibido", dbresponse: resul })
+                }
+            })
         }
         else {
 
             res.status(404).json({ status: false, message: "Error al obtener el Body" })
         }
-       
 
     }
 
@@ -135,3 +130,7 @@ module.exports = {
 
 
 };
+
+
+
+

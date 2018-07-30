@@ -1,22 +1,15 @@
 var express = require('express');
-const router = express.Router();
 const { getPosts, getComments, getPost, addComment, addPost } = require("../controllers/power-Car-Controller")
-router.route("/getPosts")
-    .get(getPosts)
-router.route("/getPost/:postId")
-    .get(getPost)
+const login = require("../controllers/login");
+const router = express.Router();
 
+router.post("/login", login.SignUp, (req, res) => res.json({ message: "Estas autenticado" }))
+router.post("/SignIn", login.SignIn, (req, res) => res.json({ message: "registro Exitoso" }))
+router.get("/getPosts", getPosts)
 
-
-
-
-router.route("/getComments/:postId")
-    .get(getComments)
-router.route("/addComment/")
-    .post(addComment)
-router.route("/addPost")
-    .post(addPost)
-
-// // .put(updateProduct)
-// // .delete(deleteProduct)
+router.get("/getPost/:postId", getPost)
+router.get("/getComments/:postId", getComments)
+router.post("/addComment/", addComment)
+router.post("/addPost", addPost)
 module.exports = router;
+
