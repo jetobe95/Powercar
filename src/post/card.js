@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import log from '../logo.svg'
-import './card.css'
-import { Row, Col, Button, } from 'reactstrap';
-import {
-  Link,Redirect
-} from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import './card.css';
+
+
 
 class CardPost extends Component {
   state = {

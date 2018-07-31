@@ -1,13 +1,8 @@
 import React from 'react';
-import { Row, Col, } from 'reactstrap';
-import log from '../logo.svg'
-import './comment.css'
-import timeAgoCal from '../timeAgo/time-ago-calc'
+import { Row } from 'reactstrap';
 import PhotoNameTime from './../post/components/foto-name-time';
+import './comment.css';
 
-const postComment = () => {
-
-}
 const Comment = (props) => (
   <div  >
 
@@ -15,7 +10,7 @@ const Comment = (props) => (
     <div className="row">
       <div className="container">
         <div className="row">
-          <PhotoNameTime {...props}/>
+          <PhotoNameTime { ...props } />
         </div>
       </div>
 
